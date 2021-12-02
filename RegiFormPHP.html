@@ -1,0 +1,366 @@
+<html>
+
+<head>
+    <title>Registration Form With PHP </title>
+    <link rel="stylesheet" href="../CSS/RegiFormPHP.CSS">
+    <script>
+        function firstName(name) {
+
+            var reg = /^[a-zA-Z]{3,10}$/
+
+
+            if (reg.test(name)) {
+                document.getElementById("mname").disabled = false;
+                document.getElementById("lb1").innerHTML = "&nbsp;";
+
+
+            }
+            else {
+                document.getElementById("mname").disabled = true;
+                document.getElementById("lb1").innerHTML = "Please enter correct first name";
+                document.getElementById("lb1").style.visibility = "visible";
+                document.getElementById("lb1").style.color = "hotpink";
+
+            }
+        }
+        function middleName(name) {
+
+            var reg = /^[a-zA-Z]{3,10}$/
+
+
+            if (reg.test(name)) {
+                document.getElementById("lname").disabled = false;
+                document.getElementById("lb2").innerHTML = "&nbsp;";
+
+
+            }
+            else {
+                document.getElementById("lname").disabled = true;
+                document.getElementById("lb2").innerHTML = "Please enter correct middle name";
+                document.getElementById("lb2").style.visibility = "visible";
+                document.getElementById("lb2").style.color = "hotpink";
+
+            }
+        }
+        function lastName(name) {
+
+            var reg = /^[a-zA-Z]{3,10}$/
+
+
+            if (reg.test(name)) {
+                document.getElementById("gender1").disabled = false;
+                document.getElementById("gender2").disabled = false;
+                document.getElementById("gender3").disabled = false;
+                document.getElementById("email").disabled = false;
+                document.getElementById("lb3").innerHTML = "&nbsp;";
+
+
+            }
+            else {
+                document.getElementById("gender1").disabled = true;
+                document.getElementById("gender2").disabled = true;
+                document.getElementById("gender3").disabled = true;
+                document.getElementById("email").disabled = true;
+                document.getElementById("lb3").innerHTML = "Please enter correct last name";
+                document.getElementById("lb3").style.visibility = "visible";
+                document.getElementById("lb3").style.color = "hotpink";
+
+            }
+        }
+        function eml(name) {
+
+            var reg = /(^[a-zA-Z0-9\.]+)@{1}([a-zA-Z]+)\.{1}([a-z]{2,10})$/
+
+
+            if (reg.test(name)) {
+                document.getElementById("mobile").disabled = false;
+                document.getElementById("lb5").innerHTML = "&nbsp;";
+            }
+            else {
+                document.getElementById("mobile").disabled = true;
+                document.getElementById("lb5").innerHTML = "Please enter correct email";
+                document.getElementById("lb5").style.visibility = "visible";
+                document.getElementById("lb5").style.color = "hotpink";
+
+            }
+        }
+        function checkMobile(name) {
+
+            var reg = /^[7-9]{1}[0-9]{9}$/
+
+
+            if (reg.test(name)) {
+                document.getElementById("dob").disabled = false;
+                document.getElementById("address").disabled = false;
+                document.getElementById("lb6").innerHTML = "&nbsp;";
+
+
+            }
+            else {
+                document.getElementById("dob").disabled = true;
+                document.getElementById("address").disabled = true;
+                document.getElementById("lb6").innerHTML = "Please enter correct mobile number";
+                document.getElementById("lb6").style.visibility = "visible";
+                document.getElementById("lb6").style.color = "hotpink";
+
+            }
+        }
+        function addrs(name) {
+
+            var str = name.trim()
+
+            if (str === null || str === "") {
+                document.getElementById("lb8").innerHTML = "Please enter address";
+                document.getElementById("lb8").style.visibility = "visible";
+                document.getElementById("lb8").style.color = "hotpink";
+                document.getElementById("courses1").disabled = true
+                document.getElementById("courses2").disabled = true
+                document.getElementById("courses3").disabled = true
+                document.getElementById("courses4").disabled = true
+                document.getElementById("courses5").disabled = true
+                document.getElementById("courses6").disabled = true
+                document.getElementById("courses7").disabled = true
+
+            }
+            else {
+                document.getElementById("lb8").innerHTML = "&nbsp;"
+                document.getElementById("courses1").disabled = false
+                document.getElementById("courses2").disabled = false
+                document.getElementById("courses3").disabled = false
+                document.getElementById("courses4").disabled = false
+                document.getElementById("courses5").disabled = false
+                document.getElementById("courses6").disabled = false
+                document.getElementById("courses7").disabled = false
+            }
+
+        }
+        function UserN(name){
+                    var name=document.getElementById("user").value
+                    Submite="true"
+                    if(name.length>8)
+                    {
+                        alert("usename should in 8 characters")
+                        Submite="false"
+                    }
+        }
+        function validate() {
+            if (document.forms["myform"]["fname"].value == "") {
+                alert("please enter the first name");
+                return false;
+            }
+            if (document.forms["myform"]["mname"].value == "") {
+                alert("please enter the middle name");
+                return false;
+            }
+            if (document.forms["myform"]["lname"].value == "") {
+                alert("please enter the last name");
+                return false;
+            }
+            
+            if (document.forms["myform"]["gender"].value == "") {
+                alert("please select Gender");
+                return false;
+
+            }
+            if (document.forms["myform"]["email"].value == "") {
+                alert("please enter the email id");
+                return false;
+            }
+            if (document.forms["myform"]["mobile"].value == "") {
+                alert("please enter the mobile number");
+                return false;
+            }
+            if (document.forms["myform"]["dob"].value == "") {
+                alert("please select date of birth");
+                return false;
+
+            }
+            if (document.forms["myform"][ "address"].value == "") {
+                alert("please enter the address");
+                return false;
+            }
+            if (document.forms["myform"]["courses"].value == "") {
+                alert("please select Course");
+                return false;
+
+            }
+            if (document.forms["myform"]["user"].value == "") {
+                alert("please enter username");
+                return false;
+            }
+
+function Pval() { 
+
+var str=document.getElementById("pass").value;
+if(pass==""){
+  alert("please fill password")
+}
+if(str.match(/[a-z]/g) && str.match(/[A-Z]/g) && str.match(/[0-9]/g) && str.match(/[^a-zA-Z\d]/g) && str.length<=8)
+submite="true";
+else{
+    alert("Password should contain at least one capital(A-Z),small(a-z) alpha,Number(0-9) and Special char(@$%?). Try Another password")
+
+submite="false";}
+document.getElementById("pass").value=res;
+
+}
+            
+            }
+
+
+    </script>
+</head>
+
+<body><h1>Student Registration</h1>
+    <div class="form">
+        <form name="myform" action="RegiFormPHP.html" onsubmit="return validate()" method="post">
+            <table>
+                <tr>
+                    <td><label>First Name</label></td>
+                    <td><input type="text" name="fname" id="fname" width="60%" placeholder="Enter first name"
+                        onkeyup="firstName(this.value)"></td>
+
+                   <td><label>Course</label></td>
+                    <td>
+                        <input type="radio" name="courses" id="courses1" value="mca"disabled>MCA
+                        <input type="radio" name="courses" id="courses2" value="m.sc" disabled>M.Sc
+                        <input type="radio" name="courses" id="courses3" value="ma" disabled>MBA
+                        <input type="radio" name="courses" id="courses4" value="be" disabled>B.E
+                        <input type="radio" name="courses" id="courses5" value="me" disabled>M.E
+                    </td>
+                        
+                 </tr>
+                <tr height="3px">
+                    <td></td>
+                    <td><label id="lb1" style=" font: size 20px; color:pink; visibility:hidden; ">&nbsp;</label></td>
+                </tr>
+                <tr>
+                    <td><label>Middle Name</label></td>
+                    <td><input type="text" name="mname" id="mname" placeholder="Enter middle name"
+                            onkeyup="middleName(this.value)"></td>
+
+                    <td><label>Collage</label></td>
+                    <td><input type="text" name="fname" id="clg" width="60%" placeholder="Enter Collage name"></td>
+            
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><label id="lb2" style=" font: size 100px; color:red; visibility:hidden ">&nbsp; </label></td>
+                </tr>
+                <tr>
+                    <td><label>Last Name</label></td>
+                    <td><input type="text" name="lname" id="lname" placeholder="Enter last name"
+                            onkeyup="lastName(this.value)"></td>
+
+                    <td><label>Score</label></td>
+                     <td><input type="text" name="score" id="score" width="60%" placeholder="Enter score"></td>
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><label id="lb3" style=" font: size 100px; color:red; visibility:hidden "> </label>&nbsp; </td>
+                </tr>
+                <tr>
+                    <td><label>Gender</label></td>
+                    <td><input type="radio" name="gender" id="gender1" value="male" onclick="gender()" >Male
+                        <input type="radio" name="gender" id="gender2" value="female" onclick="gender()">Female
+                        <input type="radio" name="gender" id="gender3" value="other" onclick="gender()" >Other
+                    </td>
+
+                        <td><label>Certifications</label></td>
+                        <td><input type="text" name="certi" id="certi" width="60%" placeholder="Enter Certifications"></td>
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><label id="lb4" style=" font: size 100px; color:red; ">&nbsp; </label></td>
+                </tr>
+                <tr>
+                    <td><label>Date Of Birth</label></td>
+                    <td><input type="date" name="dob" id="dob"></td>
+                   
+                    <td><label>Activities</label></td>
+                    <td><input type="text" name="act" id="act" width="60%" placeholder="Enter Activities"></td>
+               </tr>
+                <tr>
+                    <td></td>
+                    <td><label id="lb5" style=" font: size 100px; color:red; visibility:hidden ">&nbsp; </label></td>
+                </tr>
+                <tr>
+                    <td><label>Mobile Number</label></td>
+                    <td><input type="text" name="mobile" id="mobile" placeholder="Enter mobile number"
+                            onkeyup="checkMobile(this.value)"></td>
+
+                    <td><label>Hobby</label></td>
+                     <td><input type="text" name="hobby" id="hobby" width="60%" placeholder="Enter work Experiance"></td>
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><label id="lb6" style=" font: size 100px; color:red; visibility:hidden ">&nbsp; </label></td>
+                </tr>
+                <tr>
+                    
+
+                    <td><label>Email Id</label></td>
+                    <td><input type="text" name="email" id="email" placeholder="Enter email Id"
+                            onkeyup="eml(this.value)"></td>
+
+                        <td><label>Social Accounts</label></td>
+                        <td><input type="text" name="sa" id="sa" width="60%" placeholder="Enter Accounts"></td>
+
+                    </tr>
+                <tr>
+                    <td>
+                    <td><label id="lb7" style=" font: size 100px; color:red; visibility:hidden ">&nbsp; </label></td>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Address </label></td>
+                    <td><textarea id="address" placeholder="Enter address " onkeyup="addrs(this.value)"></textarea></td>
+
+                    <td><label>Projects</label></td>
+                    <td><textarea id="proj" placeholder="Enter Projects"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label>Username</label></td>
+                    <td><input type="text" id="user" name="user" placeholder="Enter username" onkeyup="UserN(this.value)"
+                            ></textarea></td>
+
+                    <td><label>Password</label></td>
+                    <td><input type="text" id="pass" name="pass" placeholder="Enter password" onkeyup="Pval(this.value)"
+                     ></textarea></td>
+                </tr>
+                
+
+                <tr>
+                    <td></td>
+                    <td><label id="lb8" style=" font: size 100px; color:red; visibility:hidden ">&nbsp; </label></td>
+                </tr>
+
+
+                <tr>
+                    <td></td>
+                    <td><label id="lb14" style=" font: size 100px; color:red; visibility:hidden "> &nbsp;</label></td>
+                </tr>
+                <tr></tr>
+                <tr> <td></td> <td></td>
+                    
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><label id="lb15" style=" font: size 100px; color:red; visibility:hidden "> &nbsp;</label></td>
+                </tr>
+                <tr>
+                    <a href="RLoginPHP.html">
+                    <input type="submit" id="button" value="Register" onkeyup="validate(this.value)" ></a>
+                    
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+

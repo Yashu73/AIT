@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Pyramid triangle</title>
+    </head>
+    <body>
+        <script>
+            let n =5;
+            let string="";
+            for(let i=1;i<=n;i++){
+                for(let j=n;j>i;j--){
+                    string+="";
+                }
+                for(let k=0;k<i*2-1;k++){
+                    string+="*";
+
+                }
+                string+="<br>";
+            }
+            document.write('<clpre>${string}</pre>');
+
+        </script>
+
+    </body>
+    </html>

@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+  <link rel="stylesheet" href="../CSS/Regi.CSS">
+    </head>
+        <body>
+    <div class="Container1">
+    <div class="jumbotron">
+    <h2 style="color:fuchsia; text-align: center;">Welcome</h2>
+    <br>
+    <table align="center">
+        <tr>
+            <td> <label for="email">Username:</label> <td>
+            <td><input type="text" class="form-control" name="uname" id="user" placeholder="enter usename"></td>
+        </tr>
+         <tr>
+    
+            <td> <label for="email">Password:</label> <td>
+            <td><input type="password" class="form-control" name="pass" id="Name" placeholder="Password"></td>
+        </tr>
+        <tr>
+            
+            <td>
+                <a href="RHomePHP.html"><button type="button" class="btn btn-warning">Login</button></a>
+            </td>
+        </tr>
+        </table></div></div></body></html>
+
+
+        <?php
+        $fname=$_POST['fname'];
+        $mname=$_POST['mname'];
+        $clg=$_POST['clg'];
+        $lname=$_POST['lname'];
+        $score=$_POST['score'];
+        $gender=$_POST['gender'];
+        $act=$_POST['act'];
+        $mobile=$_POST['mobile'];
+        $email=$_POST['email'];
+        $certi=$_POST['certi'];
+        $dob=$_POST['dob'];
+        $address=$_POST['address'];
+        $courses=$_POST['courses'];
+        $proj=$_POST['proj'];
+        $user=$_POST['user'];
+        $pass=$_POST['pass'];
+        $sa=$_POST['sa'];
+        $hobby=$_POST['hobby'];
+
+       echo "Details here,";
+       echo "$fname" , "<br>";
+       echo "$mname" , "<br>";
+       echo "$lname" , "<br>";
+       echo "$clg" , "<br>";
+       echo "$score" , "<br>";
+       echo "$gender" , "<br>";
+       echo "$act" , "<br>";
+       echo "$mobile" , "<br>";
+       echo "$email" , "<br>";
+       echo "$certi" , "<br>";
+       echo "$dob" , "<br>";
+       echo " $address" , "<br>";
+       echo "$courses" , "<br>";
+       echo "$proj" , "<br>";
+       echo "$user" , "<br>";
+       echo "$pass" , "<br>";
+       echo "$sa" , "<br>";
+       echo "$hobby" , "<br>";
+       ?>
+       
